@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="TechPulse: plataforma de artículos científicos y tecnológicos, ensayos y publicaciones revisadas técnicamente."
+    />
+    <title>TechPulse — Artículos científicos y tecnológicos</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-salto" href="#contenido-principal"
+      >Saltar al contenido principal</a
+    >
+
+    <!-- ================= CABECERA (Buscar / Logo / Acceso) ================= -->
+    <header class="cabecera-sitio">
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <search class="buscador-cabecera">
+          <form role="search" action="#" method="get">
+            <label for="buscar-sitio" class="oculto-visual">Buscar</label>
+            <input
+              type="search"
+              id="buscar-sitio"
+              name="q"
+              placeholder="Buscar"
+            />
+          </form>
+        </search>
+
+        <a class="marca" href="/">TechPulse</a>
+
+        <a class="enlace-acceso" href="#">Ingresar / Registro</a>
+      </nav>
+    </header>
+
+    <main id="contenido-principal">
+      <h1 class="oculto-visual">
+        TechPulse — Explorador de artículos científicos y tecnológicos
+      </h1>
+
+      <!-- ================= DESTACADOS ================= -->
+      <section class="seccion-destacadas" aria-label="Artículos destacados">
+        <ul class="lista-destacadas">
+          <li class="item-destacada">
+            <article class="destacada">
+              <figure class="destacada-miniatura">
+                <img
+                  src="https://picsum.photos/seed/techpulse-ia/320/256"
+                  alt=""
+                  width="320"
+                  height="256"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="destacada-cuerpo">
+                <p class="destacada-categoria">Inteligencia Artificial</p>
+                <h2 class="destacada-titulo">
+                  <a href="#">IA en la investigación científica</a>
+                </h2>
+                <p class="destacada-extracto">
+                  Modelos de lenguaje que aceleran la revisión y publicación
+                  académica.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="item-destacada">
+            <article class="destacada">
+              <figure class="destacada-miniatura">
+                <img
+                  src="https://picsum.photos/seed/techpulse-robot/320/256"
+                  alt=""
+                  width="320"
+                  height="256"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="destacada-cuerpo">
+                <p class="destacada-categoria">Robótica</p>
+                <h2 class="destacada-titulo">
+                  <a href="#">Robots que aprenden de las personas</a>
+                </h2>
+                <p class="destacada-extracto">
+                  Nuevos enfoques de colaboración humano-robot en la industria.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="item-destacada">
+            <article class="destacada">
+              <figure class="destacada-miniatura">
+                <img
+                  src="https://picsum.photos/seed/techpulse-bio/320/256"
+                  alt=""
+                  width="320"
+                  height="256"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="destacada-cuerpo">
+                <p class="destacada-categoria">Biotecnología</p>
+                <h2 class="destacada-titulo">
+                  <a href="#">CRISPR: medicina a la medida</a>
+                </h2>
+                <p class="destacada-extracto">
+                  Terapia génica hacia tratamientos personalizados.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <!-- Línea de progreso del carrusel de destacados -->
+        <div class="progreso-destacados" aria-hidden="true">
+          <span class="progreso-barra"></span>
+        </div>
+      </section>
+
+      <!-- ================= EXPLORAR: filtros + rejilla ================= -->
+      <section class="seccion-explorar" aria-labelledby="titulo-explorar">
+        <nav class="barra-filtros" aria-label="Filtros de categoría">
+          <ul class="lista-filtros">
+            <li>
+              <button
+                class="filtro filtro--activo"
+                type="button"
+                aria-pressed="true"
+              >
+                Todas
+              </button>
+            </li>
+            <li>
+              <button class="filtro" type="button" aria-pressed="false">
+                Inteligencia Artificial
+              </button>
+            </li>
+            <li>
+              <button class="filtro" type="button" aria-pressed="false">
+                Biotecnología
+              </button>
+            </li>
+            <li>
+              <button class="filtro" type="button" aria-pressed="false">
+                Robótica
+              </button>
+            </li>
+            <li>
+              <button class="filtro" type="button" aria-pressed="false">
+                Energías Renovables
+              </button>
+            </li>
+          </ul>
+          <button class="boton-filtrar" type="button">Filtrar</button>
+        </nav>
+
+        <header class="explorar-cabecera">
+          <h2 id="titulo-explorar">
+            Todas
+            <span class="conteo">115<small>lecturas</small></span>
+          </h2>
+
+          <nav class="paginacion" aria-label="Paginación de artículos">
+            <ul class="lista-paginacion">
+              <li>
+                <a class="pagina pagina--actual" href="#" aria-current="page"
+                  >1</a
+                >
+              </li>
+              <li><a class="pagina" href="#">2</a></li>
+              <li><a class="pagina" href="#">3</a></li>
+              <li><a class="pagina" href="#">4</a></li>
+              <li><a class="pagina" href="#">5</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="rejilla-articulos">
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-ml/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dr. Carlos Mendoza Ríos</p>
+              <time class="tarjeta-fecha" datetime="2026-01-25"
+                >25 enero 2026</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Machine Learning aplicado a la detección temprana de
+                enfermedades neurodegenerativas</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Este estudio presenta un modelo de deep learning capaz de
+              identificar patrones predictivos en resonancias magnéticas,
+              alcanzando una precisión del 94.7% en la detección temprana de
+              Alzheimer.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Inteligencia Artificial</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-ciber/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Ing. Sofía Ramírez Torres</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Ciberseguridad en infraestructuras críticas: retos y soluciones
+                para 2027</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Un ensayo sobre las vulnerabilidades actuales en sistemas de
+              control industrial y las estrategias de defensa basadas en
+              zero-trust architecture y monitoreo continuo.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Ciberseguridad</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-quantum/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dr. Javier Ortega Campos</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Computación cuántica: del laboratorio a la aplicación
+                comercial</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Análisis del estado actual de los procesadores cuánticos, sus
+              limitaciones de coherencia y los primeros casos de uso real en
+              optimización logística y criptografía.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Computación Cuántica</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-chips/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dra. Elena Vargas Castillo</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Circuitos integrados de nueva generación: hacia la
+                miniaturización cuántica</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Los avances en nanotecnología están permitiendo el desarrollo de
+              chips con arquitecturas híbridas que combinan transistores
+              clásicos y qubits, abriendo la puerta a una nueva era en el
+              procesamiento de datos.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Nanotecnología</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-space/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dr. Andrés Mejía Orozco</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Telescopios espaciales y la búsqueda de exoplanetas
+                habitables</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Las últimas misiones de observación astronómica han identificado
+              más de 50 candidatos a planetas con condiciones atmosféricas
+              compatibles con la vida, redefiniendo los límites de la
+              astrobiología.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Astronomía</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-super/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dra. Lucía Herrera Núñez</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Materiales superconductores a temperatura ambiente: el santo
+                grial de la física</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Recientes experimentos con hidruros a alta presión han demostrado
+              conductividad eléctrica sin resistencia a temperaturas cercanas a
+              los 20 °C, un hallazgo que podría revolucionar la transmisión de
+              energía.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Física de Materiales</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-iot/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Ing. Pablo Gutiérrez Soto</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Internet de las cosas industrial: conectividad inteligente en
+                la manufactura 4.0</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              La integración de sensores IoT en líneas de producción permite
+              monitoreo en tiempo real, mantenimiento predictivo y reducción de
+              hasta un 40% en costos operativos.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Tecnología</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-control/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dra. Camila Restrepo Díaz</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Salas de control y operaciones: la gestión de datos en tiempo
+                real</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Los centros de operaciones modernas utilizan dashboards integrados
+              con IA para la toma de decisiones instantáneas en sectores como
+              energía, transporte y telecomunicaciones.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Tecnología</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-exo/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dr. Mateo Sánchez Paredes</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Robótica asistida: exoesqueletos y prótesis de nueva
+                generación</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Los dispositivos robóticos portables están transformando la
+              rehabilitación médica y la asistencia a personas con movilidad
+              reducida, combinando biomecánica e inteligencia artificial.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Robótica</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-arq/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dra. Valentina Ríos Mendoza</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Estructuras modulares en la arquitectura del futuro: diseño
+                paramétrico</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              El uso de algoritmos generativos y materiales compuestos está
+              redefiniendo la construcción de espacios urbanos sostenibles,
+              optimizando el uso de recursos y la huella de carbono.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Arquitectura</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-arq2/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Dra. Valentina Ríos Mendoza</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Estructuras modulares en la arquitectura del futuro: diseño
+                paramétrico</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              El uso de algoritmos generativos y materiales compuestos está
+              redefiniendo la construcción de espacios urbanos sostenibles,
+              optimizando el uso de recursos y la huella de carbono.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Arquitectura</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+
+          <article class="tarjeta">
+            <figure class="tarjeta-media">
+              <img
+                src="https://picsum.photos/seed/techpulse-green/640/420"
+                alt=""
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+            </figure>
+            <header class="tarjeta-cabecera">
+              <p class="tarjeta-autor">Ing. Sebastián Torres Luna</p>
+              <time class="tarjeta-fecha" datetime="2025-10-19"
+                >19 octubre 2025</time
+              >
+            </header>
+            <h3 class="tarjeta-titulo">
+              <a href="#"
+                >Centros de datos verdes: eficiencia energética en la era del
+                cloud computing</a
+              >
+            </h3>
+            <p class="tarjeta-extracto">
+              Las nuevas infraestructuras de almacenamiento en la nube
+              incorporan sistemas de refrigeración líquida y energía renovable,
+              reduciendo el consumo eléctrico hasta en un 60%.
+            </p>
+            <footer class="tarjeta-pie">
+              <span class="tarjeta-categoria">Energías Renovables</span>
+              <button class="boton-enlace" type="button">Compartir</button>
+              <a class="boton-enlace boton-enlace--fuerte" href="#">Ver</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="pie-sitio">
+      <div class="pie-principal">
+        <ul class="redes-sociales" aria-label="Redes sociales">
+          <li>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3ZM9.5 9.5h3.8v1.6c.6-1 1.9-1.9 3.7-1.9 3 0 4.5 1.8 4.5 5.4V21h-4v-5.6c0-1.7-.6-2.8-2.1-2.8-1.6 0-2.4 1.1-2.4 2.8V21h-4Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.5 3h3l-7.1 8.1L21.7 21h-6.1l-4.3-5.6L6.4 21h-3l7.5-8.6L2.5 3h6.2l3.9 5.2Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="pie-marca">TechPulse</p>
+      </div>
+
+      <div class="pie-legal">
+        <div class="pie-legal-contenido">
+          <p>
+            <small
+              >© 2025 TechPulse Editorial. Todos los derechos reservados.</small
+            >
+          </p>
+          <nav aria-label="Categorías del sitio">
+            <ul class="enlaces-pie">
+              <li><a href="#">Todas</a></li>
+              <li><a href="#">Inteligencia Artificial</a></li>
+              <li><a href="#">Biotecnología</a></li>
+              <li><a href="#">Robótica</a></li>
+              <li><a href="#">Energías Renovables</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
